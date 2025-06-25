@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Prediction - Form</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mental Health Prediction Form</h2>
+    <form action="/out" method="POST">
+        <label for="age">Age:</label>
+        <input type="number" name="age" required>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="self_employed">Self Employed:</label>
+        <select name="self_employed">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="family_history">Family History of Mental Illness:</label>
+        <select name="family_history">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="work_interfere">Work Interfere:</label>
+        <select name="work_interfere">
+            <option value="Often">Often</option>
+            <option value="Rarely">Rarely</option>
+            <option value="Never">Never</option>
+            <option value="Sometimes">Sometimes</option>
+        </select>
+
+        <label for="no_employees">No. of Employees:</label>
+        <select name="no_employees">
+            <option value="1-5">1-5</option>
+            <option value="6-25">6-25</option>
+            <option value="26-100">26-100</option>
+            <option value="100-500">100-500</option>
+            <option value="500-1000">500-1000</option>
+            <option value="More than 1000">More than 1000</option>
+        </select>
+
+        <label for="remote_work">Remote Work:</label>
+        <select name="remote_work">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="tech_company">Tech Company:</label>
+        <select name="tech_company">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="benefits">Benefits:</label>
+        <select name="benefits">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label for="care_options">Care Options:</label>
+        <select name="care_options">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Not sure">Not sure</option>
+        </select>
+
+        <label for="wellness_program">Wellness Program:</label>
+        <select name="wellness_program">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label for="seek_help">Seek Help:</label>
+        <select name="seek_help">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label for="anonymity">Anonymity:</label>
+        <select name="anonymity">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label for="leave">Leave:</label>
+        <select name="leave">
+            <option value="Very easy">Very easy</option>
+            <option value="Somewhat easy">Somewhat easy</option>
+            <option value="Somewhat difficult">Somewhat difficult</option>
+            <option value="Very difficult">Very difficult</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label for="mental_health_consequence">Mental Health Consequence:</label>
+        <select name="mental_health_consequence">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label for="phys_health_consequence">Physical Health Consequence:</label>
+        <select name="phys_health_consequence">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label for="coworkers">Coworkers:</label>
+        <select name="coworkers">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Some of them">Some of them</option>
+        </select>
+
+        <label for="supervisor">Supervisor:</label>
+        <select name="supervisor">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Some of them">Some of them</option>
+        </select>
+
+        <label for="mental_health_interview">Mental Health Interview:</label>
+        <select name="mental_health_interview">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label for="phys_health_interview">Physical Health Interview:</label>
+        <select name="phys_health_interview">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Maybe">Maybe</option>
+        </select>
+
+        <label for="mental_vs_physical">Mental vs Physical:</label>
+        <select name="mental_vs_physical">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Don't know">Don't know</option>
+        </select>
+
+        <label for="obs_consequence">Observed Consequences:</label>
+        <select name="obs_consequence">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
